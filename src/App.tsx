@@ -31,7 +31,7 @@ function App() {
   });
 
   return (
-    <main>
+    <main className="bg-light-gradient min-h-screen mx-auto p-4">
       <ExtensionsList
         extensions={visible}
         onToggle={handleToggle}

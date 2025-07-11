@@ -8,7 +8,7 @@ interface ExtensionsListProps {
 }
 
 const ExtensionsList: React.FC<ExtensionsListProps> = ({ extensions, onToggle, onRemove }) => (
-  <div className="grid …">
+  <div className="grid space-y-3">
     {extensions.map(ext => (
       <ExtensionCard
         key={ext.id}

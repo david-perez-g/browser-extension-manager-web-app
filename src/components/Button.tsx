@@ -13,12 +13,12 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   ...props
 }) => {
-  const base = "px-4 py-2 text-sm font-medium rounded-full transition";
-  
+  const base = "px-5 py-2 text-sm font-medium rounded-full transition";
+
   const styles =
     variant === "outline"
       ? "border-2 border-gray-300 bg-white text-gray-800 hover:bg-gray-100"
-      : "bg-red-700 text-white hover:bg-red-800";
+      : "bg-red-500 text-white hover:bg-red-800";
 
   return (
     <button className={`${base} ${styles} ${className}`} {...props}>

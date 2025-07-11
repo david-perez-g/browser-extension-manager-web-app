@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@theme {
+  --color-neutral-900: hsl(227, 75%, 14%);
+  --color-neutral-800: hsl(226, 25%, 17%);
+  --color-neutral-700: hsl(225, 23%, 24%);
+  --color-neutral-600: hsl(226, 11%, 37%);
+  --color-neutral-300: hsl(0, 0%, 78%);
+  --color-neutral-200: hsl(217, 61%, 90%);
+  --color-neutral-100: hsl(0, 0%, 93%);
+  --color-neutral-0: hsl(200, 60%, 99%);
+
+  --color-red-400: hsl(3, 86%, 64%);
+  --color-red-500: hsl(3, 71%, 56%);
+  --color-red-700: hsl(3, 77%, 44%);
+
+  /* Font family & weights */
+  --font-sans: "Noto Sans", sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Typography scale */
+  --text-base: 1rem; /* 16px default paragraph */
+
+  /* Responsive breakpoints */
+  --breakpoint-sm: 20rem; /* 320px */
+  --breakpoint-md: 23.4375rem; /* 375px (design mobile) */
+  --breakpoint-lg: 90rem; /* 1440px (design desktop) */
+
+  --bg-gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --bg-gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+/* Base styles with CSS variables */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+  }
+  body {
+    @apply bg-neutral-0 text-neutral-900;
+  }
+}

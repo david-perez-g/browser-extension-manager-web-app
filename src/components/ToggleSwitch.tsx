@@ -15,7 +15,7 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ on, className = "", ...prop
     />
     <span
       className={`relative inline-block h-6 w-11 rounded-full transition-colors ${
-        on ? "bg-red-700" : "bg-gray-300"
+        on ? "bg-red-700" : "bg-gray-300 dark:bg-gray-500"
       }`}
     >
       <span

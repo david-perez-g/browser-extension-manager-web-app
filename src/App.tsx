@@ -54,7 +54,7 @@ function App() {
 
       <main>
         <section className="flex h-48 flex-col items-center justify-center">
-          <h2 className="mb-5 flex justify-center text-4xl font-bold">
+          <h2 className="mb-5 flex justify-center text-4xl font-bold dark:text-white">
             Extensions List
           </h2>
           <FilterTabs current={filter} onChange={handleFilterChange} />

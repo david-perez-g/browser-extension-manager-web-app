@@ -17,8 +17,8 @@ const Button: React.FC<ButtonProps> = ({
 
   const styles =
     variant === "outline"
-      ? "border-2 border-gray-300 bg-white text-gray-800 hover:bg-gray-100"
-      : "bg-red-500 text-white hover:bg-red-800";
+      ? "border-2 border-gray-300 bg-white text-gray-800 hover:bg-gray-100 dark:bg-neutral-700 dark:text-white dark:border dark:border-neutral-500"
+      : "bg-red-500 text-white hover:bg-red-800 dark:text-black";
 
   return (
     <button className={`${base} ${styles} ${className}`} {...props}>

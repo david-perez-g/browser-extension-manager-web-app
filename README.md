@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# Browser Extensions Manager UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Design preview for the Browser extensions manager UI](./preview.jpg)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a learning project to practice building a modern, responsive UI for managing browser extensions. The goal is to create an interactive interface with React, TypeScript, and Tailwind CSS, following best practices for code quality and maintainability.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Toggle extensions between active and inactive states
+- Filter active and inactive extensions
+- Remove extensions from the list
+- Select color theme (light/dark)
+- Responsive layout for all device sizes
+- Accessible hover and focus states for all interactive elements
+- Data-driven UI using a local `data.json` file
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Tech Stack
+
+- **React** (with TypeScript) for UI development
+- **Vite** for fast development and build tooling
+- **Tailwind CSS** for utility-first styling
+- **ESLint** for linting and code quality
+- **Prettier** (with `prettier-plugin-tailwindcss`) for code formatting
+
+### Prettier Configuration
+
+Prettier is configured with the Tailwind CSS plugin to ensure class order consistency. See `.prettierrc`:
+
+```json
+{
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+4. **Preview the production build:**
+   ```sh
+   npm run preview
+   ```
+5. **Lint your code:**
+   ```sh
+   npm run lint
+   ```
+
+---
+
+## Folder Structure
+
+- `src/` - Main source code (components, styles, data)
+- `public/` - Static assets
+- `.prettierrc` - Prettier config
+- `eslint.config.js` - ESLint config
+- `vite.config.ts` - Vite config
+
+---
+
+## License
+
+This project is licensed under the GNU License.

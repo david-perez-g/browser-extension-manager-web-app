@@ -17,13 +17,15 @@ const Button: React.FC<ButtonProps> = ({
 
   const styles =
     variant === "outline"
-      ? "border-2 border-gray-300 bg-white text-gray-800 hover:bg-gray-100 dark:bg-neutral-700 dark:text-white dark:border dark:border-neutral-500"
-      : "bg-red-500 text-white hover:bg-red-800 dark:text-black";
+      ? "border border-gray-300 hover:border-transparent hover:bg-gray-200 dark:hover:bg-red-500 bg-white text-gray-800 dark:bg-neutral-700 dark:text-white dark:border dark:border-neutral-500"
+      : "bg-red-500 text-white dark:text-black";
 
   return (
-    <button className={`${base} ${styles} ${className}`} {...props}>
-      {children}
-    </button>
+    <div className="rounded-full border-2 border-transparent p-px focus:border-red-700">
+      <button className={`${base} ${styles} ${className}`} {...props}>
+        {children}
+      </button>
+    </div>
   );
 };
 

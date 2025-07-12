@@ -24,7 +24,7 @@ const FilterTabs: React.FC<FilterTabsProps> = ({ current, onChange }) => (
         className={`text-xl font-medium ${
           current === value
             ? "border-neutral-900 text-neutral-900"
-            : "text-neutral-600 hover:text-neutral-800"
+            : "text-neutral-600"
         }`}
       >
         {label}

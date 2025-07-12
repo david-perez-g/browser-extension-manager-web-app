@@ -19,7 +19,7 @@ const ExtensionCard: React.FC<ExtensionCardProps> = ({
   const logoUrl = new URL(`../assets/images/${logo}`, import.meta.url).href;
 
   return (
-    <Card className="max-lg:w-[350px] max-sm:w-80 dark:bg-neutral-700">
+    <Card className="max-lg:w-11/12 dark:bg-neutral-700">
       {/* Header */}
       <div className="mb-11 flex flex-1 items-start">
         <img

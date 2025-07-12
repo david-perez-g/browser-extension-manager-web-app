@@ -5,16 +5,17 @@ interface ToggleSwitchProps extends InputHTMLAttributes<HTMLInputElement> {
   on: boolean;
 }
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ on, className = "", ...props }) => (
-  <label className={`flex cursor-pointer items-center ${className}`}>
-    <input
-      type="checkbox"
-      checked={on}
-      {...props}
-      className="sr-only"
-    />
+const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
+  on,
+  className = "",
+  ...props
+}) => (
+  <label
+    className={`flex cursor-pointer items-center rounded-full border-2 border-transparent p-px focus:border-red-700 ${className}`}
+  >
+    <input type="checkbox" checked={on} {...props} className="sr-only" />
     <span
-      className={`relative inline-block h-6 w-11 rounded-full transition-colors ${
+      className={`transition-color relative inline-block h-6 w-11 rounded-full ${
         on ? "bg-red-700" : "bg-gray-300 dark:bg-gray-500"
       }`}
     >

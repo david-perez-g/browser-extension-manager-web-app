@@ -49,12 +49,11 @@ function App() {
   });
 
   return (
-    <div className="bg-light-gradient dark:bg-dark-gradient mx-auto min-h-screen p-6">
-      <AppBar onToggleTheme={handleToggleTheme} isDarkMode={isDarkMode} />
-
-      <main>
-        <section className="flex h-48 flex-col items-center justify-center">
-          <h2 className="mb-5 flex justify-center text-4xl font-bold dark:text-white">
+    <div className="bg-light-gradient dark:bg-dark-gradient">
+      <main className="mx-auto min-h-screen max-w-[var(--breakpoint-lg)] p-6">
+        <AppBar onToggleTheme={handleToggleTheme} isDarkMode={isDarkMode} />
+        <section className="flex h-48 flex-col items-center justify-center md:mt-6 md:h-24 md:flex-row md:items-center md:justify-between">
+          <h2 className="flex justify-center text-4xl font-bold dark:text-white">
             Extensions List
           </h2>
           <FilterTabs current={filter} onChange={handleFilterChange} />

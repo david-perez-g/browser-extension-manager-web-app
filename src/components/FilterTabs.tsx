@@ -15,7 +15,7 @@ const tabs: { label: string; value: FilterOption }[] = [
 ];
 
 const FilterTabs: React.FC<FilterTabsProps> = ({ current, onChange }) => (
-  <nav className="flex space-x-4">
+  <nav className="my-4 flex space-x-4">
     {tabs.map(({ label, value }) => (
       <Button
         variant={current === value ? "solid" : "outline"}

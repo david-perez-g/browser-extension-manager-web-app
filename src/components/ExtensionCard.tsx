@@ -19,17 +19,19 @@ const ExtensionCard: React.FC<ExtensionCardProps> = ({
   const logoUrl = new URL(`../assets/images/${logo}`, import.meta.url).href;
 
   return (
-    <Card className="space-y-4 dark:bg-neutral-700">
+    <Card className="max-lg:w-[350px] max-sm:w-80 dark:bg-neutral-700">
       {/* Header */}
-      <div className="flex items-start mb-11">
+      <div className="mb-11 flex flex-1 items-start">
         <img
-          src={logoUrl} 
+          src={logoUrl}
           alt={`${name} logo`}
           className="mr-4 h-14 w-14 flex-shrink-0"
         />
         <div className="flex-1">
-          <h3 className="text-lg font-bold mb-0.5 dark:text-white">{name}</h3>
-          <p className="text-sm text-gray-600 dark:text-white">{description}</p>
+          <h3 className="mb-0.5 text-lg font-bold dark:text-white">{name}</h3>
+          <p className="line-clamp-3 text-sm text-gray-600 dark:text-white">
+            {description}
+          </p>
         </div>
       </div>
 
@@ -39,10 +41,7 @@ const ExtensionCard: React.FC<ExtensionCardProps> = ({
           Remove
         </Button>
 
-        <ToggleSwitch
-          on={isActive}
-          onChange={() => onToggle(id)}
-        />
+        <ToggleSwitch on={isActive} onChange={() => onToggle(id)} />
       </div>
     </Card>
   );

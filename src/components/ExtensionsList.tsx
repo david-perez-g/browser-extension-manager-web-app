@@ -3,13 +3,17 @@ import ExtensionCard from "./ExtensionCard";
 
 interface ExtensionsListProps {
   extensions: BrowserExtension[];
-  onToggle: (id:string)=>void;
-  onRemove: (id:string)=>void;
+  onToggle: (id: string) => void;
+  onRemove: (id: string) => void;
 }
 
-const ExtensionsList: React.FC<ExtensionsListProps> = ({ extensions, onToggle, onRemove }) => (
-  <div className="grid space-y-3">
-    {extensions.map(ext => (
+const ExtensionsList: React.FC<ExtensionsListProps> = ({
+  extensions,
+  onToggle,
+  onRemove,
+}) => (
+  <div className="grid grid-cols-1 justify-items-center gap-3 md:grid-cols-2 lg:grid-cols-3">
+    {extensions.map((ext) => (
       <ExtensionCard
         key={ext.id}
         extension={ext}

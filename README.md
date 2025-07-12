@@ -77,4 +77,4 @@ Prettier is configured with the Tailwind CSS plugin to ensure class order consis
 
 ## License
 
-This project is licensed under the GNU License.
+This project is licensed under the GPLv3 License.

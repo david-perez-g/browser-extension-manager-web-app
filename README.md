@@ -1,4 +1,7 @@
+
 # Browser Extensions Manager UI
+
+**Live Demo:** [View the app live](https://david-perez-g.github.io/browser-extension-manager-web-app/)
 
 ![Design preview for the Browser extensions manager UI](./preview.jpg)
 
